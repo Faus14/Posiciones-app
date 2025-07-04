@@ -7,7 +7,7 @@
     <select formControlName="idEmpresa">
       <option value="" disabled>Seleccione empresa</option>
       @for (e of empresas; track e) {
-        <option [value]="e.id">{{ e.nombre }}</option>
+        <option [value]="e.id">{{ e.razonSocial }}</option>
       }
     </select>
   </label>
