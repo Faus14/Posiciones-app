@@ -3,25 +3,39 @@
 echo "🚀 Iniciando instalación de Posiciones App"
 
 echo "🔧 Levantando base de datos MySQL con Docker..."
-docker compose up -d
+sudo docker compose up -d
 
 echo "📦 Backend - Instalando dependencias Laravel..."
 cd posiciones-app-back
+
+echo "📄 Copiando archivo .env..."
+cp .env.example .env
+
+echo "🔐 Configurando conexión a MySQL en .env..."
+sed -i 's/DB_PASSWORD=.*/DB_PASSWORD=mi_password_segura/' .env
+
 composer install
 
 echo "🔑 Generando APP_KEY de Laravel..."
 php artisan key:generate
 
-echo "🛠️ Ejecutando migraciones y seeders..."
-php artisan migrate --seed
+echo "🛠️ Ejecutando migraciones y seeders (reseteando base de datos)..."
+php artisan migrate:fresh --seed
 
 echo "🌐 Levantando backend en segundo plano (http://localhost:8000)..."
+sudo fuser -k 8000/tcp
 php artisan serve --port=8000 &
 
 cd ..
 
 echo "🌍 Frontend - Instalando dependencias Angular..."
 cd posiciones-front
+
+if [ ! -f package.json ]; then
+  echo "❌ ERROR: No se encontró package.json en posiciones-front. ¿Estás seguro que el frontend está allí?"
+  exit 1
+fi
+
 npm install
 
 echo "⚙️ Levantando frontend (http://localhost:4200)..."
