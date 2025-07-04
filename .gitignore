@@ -1,0 +1,21 @@
+# Laravel backend
+posiciones-app-back/vendor/
+posiciones-app-back/node_modules/
+posiciones-app-back/.env
+posiciones-app-back/storage/*.log
+posiciones-app-back/storage/*.key
+posiciones-app-back/bootstrap/cache/*.php
+
+# Angular frontend
+posiciones-front/node_modules/
+posiciones-front/dist/
+posiciones-front/.angular/
+
+# Docker
+mysql_data/
+
+# IDEs y SO
+.vscode/
+.idea/
+*.log
+*.DS_Store
