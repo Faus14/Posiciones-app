@@ -40,3 +40,4 @@ npm install
 
 echo "⚙️ Levantando frontend (http://localhost:4200)..."
 ng serve --port=4200
+echo "🎉 Instalación completada. Accede a la aplicación en http://localhost:4200"
