@@ -1,0 +1,14 @@
+<div class="container">
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <nav class="sidebar">
+    <a routerLink="/inicio" (click)="cerrarMenu()">Inicio</a>
+    <a routerLink="/listado" (click)="cerrarMenu()">Listado</a>
+    <a routerLink="/crear-posicion" (click)="cerrarMenu()">Crear Posición</a>
+  </nav>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

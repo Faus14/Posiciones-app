@@ -1,0 +1,46 @@
+<h2>Cargar Nueva Posición</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label>
+    Empresa:
+    <select formControlName="idEmpresa">
+      <option value="" disabled>Seleccione empresa</option>
+      @for (e of empresas; track e) {
+        <option [value]="e.id">{{ e.nombre }}</option>
+      }
+    </select>
+  </label>
+  <br />
+
+  <label>
+    Producto:
+    <select formControlName="idProducto">
+      <option value="" disabled>Seleccione producto</option>
+      @for (p of productos; track p) {
+        <option [value]="p.id">{{ p.nombre }}</option>
+      }
+    </select>
+  </label>
+  <br />
+
+  <label>
+    Fecha de entrega:
+    <input type="date" formControlName="fechaEntregaInicio" />
+  </label>
+  <br />
+
+  <label>
+    Moneda (ej: USD):
+    <input type="text" formControlName="moneda" maxlength="3" />
+  </label>
+  <br />
+
+  <label>
+    Precio:
+    <input type="number" formControlName="precio" min="0.01" step="0.01" />
+  </label>
+  <br />
+
+  <button type="submit" [disabled]="form.invalid">Crear</button>
+</form>

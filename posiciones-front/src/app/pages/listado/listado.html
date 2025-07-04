@@ -1,0 +1,25 @@
+<h1>Listado de Posiciones</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Empresa</th>
+      <th>Producto</th>
+      <th>Fecha disponibilidad</th>
+      <th>Precio</th>
+      <th>Moneda</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (posicion of posiciones; track posicion) {
+      <tr>
+        <td data-label="Empresa">{{ posicion.nombreEmpresa }}</td>
+        <td data-label="Producto">{{ posicion.nombreProducto }}</td>
+        <td data-label="Fecha">{{ posicion.fechaEntregaInicio | date }}</td>
+        <td data-label="Precio">{{ posicion.precio }}</td>
+        <td data-label="Moneda">{{ posicion.moneda }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+
