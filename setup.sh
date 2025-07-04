@@ -5,6 +5,16 @@ echo "🚀 Iniciando instalación de Posiciones App"
 echo "🔧 Levantando base de datos MySQL con Docker..."
 sudo docker compose up -d
 
+echo "⏳ Esperando que MySQL esté listo..."
+
+# Espera hasta que MySQL responda correctamente al ping
+until sudo docker exec posiciones-app-mysql-1 mysqladmin ping -h "localhost" --silent; do
+  echo "MySQL no está listo, esperando 2 segundos..."
+  sleep 2
+done
+
+echo "MySQL está listo."
+
 echo "📦 Backend - Instalando dependencias Laravel..."
 cd posiciones-app-back
 
