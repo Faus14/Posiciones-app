@@ -50,6 +50,7 @@ Si prefieres instalar paso a paso:
 #### Paso 1: Levantar base de datos
 ```bash
 sudo docker compose up -d
+sleep 10
 ```
 
 #### Paso 2: Configurar backend
@@ -70,6 +71,8 @@ php artisan migrate:fresh --seed
 # Levantar servidor backend
 php artisan serve --port=8000
 ```
+
+Nota: El servidor backend se quedará ejecutándose. Abre una nueva pestaña/terminal para el siguiente paso.
 
 #### Paso 3: Configurar frontend
 ```bash
