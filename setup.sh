@@ -10,7 +10,7 @@ echo "⏳ Esperando que MySQL esté listo..."
 # Espera hasta que MySQL responda correctamente al ping
 until sudo docker exec posiciones-app-mysql-1 mysqladmin ping -h "localhost" --silent; do
   echo "MySQL no está listo, esperando 2 segundos..."
-  sleep 2
+  sleep 8
 done
 
 echo "MySQL está listo."
