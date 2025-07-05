@@ -12,10 +12,10 @@ Este repositorio contiene una aplicación full-stack que incluye:
 
 Antes de comenzar, asegúrate de tener instalado:
 
-- [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/)
-- [PHP >= 8.x](https://www.php.net/) con [Composer](https://getcomposer.org/)
-- [Node.js](https://nodejs.org/) y [Angular CLI](https://angular.io/cli)
-- Git
+- [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/) (versiones recientes)  
+- [PHP >= 8.1](https://www.php.net/) con [Composer](https://getcomposer.org/)  
+- [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.io/cli)  
+- Git (para clonar el repositorio)
 
 ## 📥 Instalación
 
@@ -27,8 +27,8 @@ cd Posiciones-app
 ```
 
 ### 2. Instalación automática (recomendada)
+El proyecto incluye un script `setup.sh` que automatiza todo el proceso en sistemas Linux/macOS. Asegúrate que el script tenga permisos de ejecución:
 
-El proyecto incluye un script que automatiza todo el proceso:
 
 ```bash
 chmod +x setup.sh
