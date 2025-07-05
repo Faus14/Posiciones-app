@@ -14,7 +14,6 @@
   </div>
   }
 
-
   <label>
     Empresa:
     <select formControlName="idEmpresa">
@@ -44,8 +43,12 @@
   <br />
 
   <label>
-    Moneda (ej: USD):
-    <input type="text" formControlName="moneda" maxlength="3" />
+    Moneda:
+    <select formControlName="moneda">
+      @for (moneda of monedas; track moneda.value) {
+      <option [value]="moneda.value">{{ moneda.label }}</option>
+      }
+    </select>
   </label>
   <br />
 

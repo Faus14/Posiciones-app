@@ -6,13 +6,10 @@ import { EmpresasService, Empresa } from '../../services/empresas';
 import { ProductosService, Producto } from '../../services/productos';
 import { CommonModule } from '@angular/common';
 
-
-
-
 @Component({
   selector: 'app-crear-posicion',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule,CommonModule ],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './crear-posicion.html',
   styleUrls: ['./crear-posicion.css']
 })
@@ -21,6 +18,12 @@ export class CrearPosicionComponent implements OnInit {
   empresas: Empresa[] = [];
   productos: Producto[] = [];
   errorMessages: string[] = [];
+
+  // Opciones de moneda según el documento del CRM
+  monedas = [
+    { value: 'USD', label: 'USD' },
+    { value: 'ARS', label: 'ARS' }
+  ];
 
   constructor(
     private fb: FormBuilder,
@@ -33,7 +36,7 @@ export class CrearPosicionComponent implements OnInit {
       idEmpresa: ['', Validators.required],
       idProducto: ['', Validators.required],
       fechaEntregaInicio: ['', Validators.required],
-      moneda: ['', [Validators.required, Validators.maxLength(3)]],
+      moneda: ['USD', Validators.required], // USD como valor por defecto según el documento
       precio: ['', [Validators.required, Validators.min(0.01)]],
     });
   }
@@ -72,5 +75,4 @@ export class CrearPosicionComponent implements OnInit {
       }
     });
   }
-
 }
