@@ -1,62 +1,63 @@
 <h2>Cargar Nueva Posición</h2>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
 
-  <!-- Mensajes de error generales -->
+
   @if (errorMessages.length > 0) {
-  <div class="error-messages">
-    <h3>Error:</h3>
-    <ul>
-      @for (error of errorMessages; track error) {
-      <li>{{ error }}</li>
-      }
-    </ul>
-  </div>
+    <div class="error-messages">
+      <h3>Error:</h3>
+      <ul>
+        @for (error of errorMessages; track error) {
+          <li>{{ error }}</li>
+        }
+      </ul>
+    </div>
   }
+
 
   <label>
     Empresa:
-    <select formControlName="idEmpresa">
+    <select formControlName="idEmpresa" required>
       <option value="" disabled>Seleccione empresa</option>
       @for (e of empresas; track e) {
-      <option [value]="e.id">{{ e.razonSocial }}</option>
+        <option [value]="e.id">{{ e.razonSocial }}</option>
       }
     </select>
   </label>
-  <br />
+
 
   <label>
     Producto:
-    <select formControlName="idProducto">
+    <select formControlName="idProducto" required>
       <option value="" disabled>Seleccione producto</option>
       @for (p of productos; track p) {
-      <option [value]="p.id">{{ p.nombre }}</option>
+        <option [value]="p.id">{{ p.nombre }}</option>
       }
     </select>
   </label>
-  <br />
+
 
   <label>
     Fecha de entrega:
-    <input type="date" formControlName="fechaEntregaInicio" />
+    <input type="date" formControlName="fechaEntregaInicio" required />
   </label>
-  <br />
+
 
   <label>
     Moneda:
-    <select formControlName="moneda">
+    <select formControlName="moneda" required>
       @for (moneda of monedas; track moneda.value) {
-      <option [value]="moneda.value">{{ moneda.label }}</option>
+        <option [value]="moneda.value">{{ moneda.label }}</option>
       }
     </select>
   </label>
-  <br />
+
 
   <label>
     Precio:
-    <input type="number" formControlName="precio" min="0.01" step="0.01" />
+    <input type="number" formControlName="precio" min="0.01" step="0.01" required />
   </label>
-  <br />
+
 
   <button type="submit" [disabled]="form.invalid">Crear</button>
 </form>
