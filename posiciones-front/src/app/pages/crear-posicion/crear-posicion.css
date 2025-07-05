@@ -91,3 +91,22 @@ button:not(:disabled):hover {
     font-size: 1.1rem;
   }
 }
+
+/* Errores */
+.error-messages {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  color: #b30000;
+}
+
+.error-messages ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.error-messages li {
+  margin-bottom: 0.3rem;
+}

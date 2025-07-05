@@ -2,12 +2,25 @@
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
+  <!-- Mensajes de error generales -->
+  @if (errorMessages.length > 0) {
+  <div class="error-messages">
+    <h3>Error:</h3>
+    <ul>
+      @for (error of errorMessages; track error) {
+      <li>{{ error }}</li>
+      }
+    </ul>
+  </div>
+  }
+
+
   <label>
     Empresa:
     <select formControlName="idEmpresa">
       <option value="" disabled>Seleccione empresa</option>
       @for (e of empresas; track e) {
-        <option [value]="e.id">{{ e.razonSocial }}</option>
+      <option [value]="e.id">{{ e.razonSocial }}</option>
       }
     </select>
   </label>
@@ -18,7 +31,7 @@
     <select formControlName="idProducto">
       <option value="" disabled>Seleccione producto</option>
       @for (p of productos; track p) {
-        <option [value]="p.id">{{ p.nombre }}</option>
+      <option [value]="p.id">{{ p.nombre }}</option>
       }
     </select>
   </label>

@@ -16,7 +16,7 @@ export interface Posicion {
 @Injectable({ providedIn: 'root' })
 export class PosicionesService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8000/api/posiciones';
+  private apiUrl = 'http://localhost:8001/api/posiciones';
 
   getPosiciones(): Observable<Posicion[]> {
     return this.http.get<Posicion[]>(this.apiUrl);

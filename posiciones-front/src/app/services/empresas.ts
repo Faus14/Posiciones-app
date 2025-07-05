@@ -11,7 +11,7 @@ export interface Empresa {
   providedIn: 'root'
 })
 export class EmpresasService {
-  private apiUrl = 'http://localhost:8000/api/empresas';
+  private apiUrl = 'http://localhost:8001/api/empresas';
 
   constructor(private http: HttpClient) {}
 

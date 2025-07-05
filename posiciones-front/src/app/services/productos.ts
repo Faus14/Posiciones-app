@@ -11,7 +11,7 @@ export interface Producto {
   providedIn: 'root'
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:8000/api/productos';
+  private apiUrl = 'http://localhost:8001/api/productos';
 
   constructor(private http: HttpClient) {}
 
