@@ -47,13 +47,13 @@ chmod +x setup.sh
 
 Si prefieres instalar paso a paso:
 
-#### Paso 1: Levantar base de datos
+#### Levantar base de datos
 ```bash
 sudo docker compose up -d
 sleep 10
 ```
 
-#### Paso 2: Configurar backend
+#### Configurar backend
 ```bash
 cd posiciones-app-back
 
@@ -74,7 +74,7 @@ php artisan serve --port=8000
 
 Nota: El servidor backend se quedará ejecutándose. Abre una nueva pestaña/terminal para el siguiente paso.
 
-#### Paso 3: Configurar frontend
+#### Configurar frontend
 ```bash
 cd ../posiciones-front
 
@@ -85,7 +85,7 @@ npm install
 ng serve --port=4200
 ```
 
-## Acceso a la aplicación
+## 3. Acceso a la aplicación
 
 - **Frontend**: [http://localhost:4200](http://localhost:4200)
 - **Backend API**: [http://localhost:8000](http://localhost:8000)
