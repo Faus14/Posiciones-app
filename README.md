@@ -14,7 +14,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
 - [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/) (versiones recientes)  
 - [PHP >= 8.1](https://www.php.net/) con [Composer](https://getcomposer.org/)  
-- [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.io/cli)  
+- [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.dev/)  
 - Git (para clonar el repositorio)
 
 ## 📥 Instalación
@@ -90,4 +90,35 @@ ng serve --port=4200
 - **Frontend**: [http://localhost:4200](http://localhost:4200)
 - **Backend API**: [http://localhost:8000](http://localhost:8000)
 
+Este proyecto cumple con todos los requerimientos solicitados:
 
+🔙 Backend - Laravel
+✔️ Listar productos ordenados por usoFrecuente
+
+✔️ Crear posiciones con validaciones:
+
+El precio debe ser mayor a cero
+
+La fechaEntregaInicio debe ser igual o posterior a hoy
+
+✔️ Listar posiciones ordenadas por usoFrecuente del producto
+
+✔️ Comando de consola posicion:crear para insertar posiciones desde la terminal
+
+```bash
+php artisan posicion:crear 1 2 2025-07-10 USD 1500
+```
+
+Esto creará una nueva posición si existen los IDs de empresa y producto, la fecha es válida y el precio es mayor a cero.
+
+
+Frontend - Angular
+✔️ Webapp responsive con menú lateral y navegación entre páginas
+
+✔️ Página que consume el listado de posiciones mostrando:
+
+Empresa-Producto-Fecha de entrega-Moneda-Precio
+
+✔️ Página para cargar nuevas posiciones vía formulario
+
+Al guardar, se redirige al listado automáticamente
