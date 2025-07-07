@@ -92,18 +92,14 @@ ng serve --port=4200
 
 Este proyecto cumple con todos los requerimientos solicitados:
 
-🔙 Backend - Laravel
-✔️ Listar productos ordenados por usoFrecuente
+## Backend - Laravel
+- Listar productos ordenados por usoFrecuente
 
-✔️ Crear posiciones con validaciones:
+- Crear posiciones con validaciones
 
-El precio debe ser mayor a cero
+- Listar posiciones ordenadas por usoFrecuente del producto
 
-La fechaEntregaInicio debe ser igual o posterior a hoy
-
-✔️ Listar posiciones ordenadas por usoFrecuente del producto
-
-✔️ Comando de consola posicion:crear para insertar posiciones desde la terminal
+- Comando de consola posicion:crear para insertar posiciones desde la terminal
 
 ```bash
 php artisan posicion:crear 1 2 2025-07-10 USD 1500
@@ -112,13 +108,9 @@ php artisan posicion:crear 1 2 2025-07-10 USD 1500
 Esto creará una nueva posición si existen los IDs de empresa y producto, la fecha es válida y el precio es mayor a cero.
 
 
-Frontend - Angular
-✔️ Webapp responsive con menú lateral y navegación entre páginas
+## Frontend - Angular
+- Webapp responsive con menú lateral y navegación entre páginas
 
-✔️ Página que consume el listado de posiciones mostrando:
+- Página que consume el listado de posiciones mostrando
 
-Empresa-Producto-Fecha de entrega-Moneda-Precio
-
-✔️ Página para cargar nuevas posiciones vía formulario
-
-Al guardar, se redirige al listado automáticamente
+- Página para cargar nuevas posiciones vía formulario
