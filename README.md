@@ -14,6 +14,8 @@ Antes de comenzar, asegúrate de tener instalado:
 
 - [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/) (versiones recientes)  
 - [PHP >= 8.2](https://www.php.net/) con [Composer](https://getcomposer.org/)  
+- Extensiones PHP necesarias:
+  - `php-xml` `php-mysql` (sudo apt install php8.3-xml php8.3-mysql)
 - [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.dev/)  
 - Git (para clonar el repositorio)
 
