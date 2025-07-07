@@ -1,14 +1,14 @@
-# 📌 Posiciones App
+# Posiciones App
 
 
-## 🚀 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este repositorio contiene una aplicación full-stack que incluye:
 
-- **🔧 Backend**: Desarrollada en Laravel (PHP) con base de datos MySQL dockerizada
-- **💻 Frontend**: Desarrollada en Angular
+- ** Backend**: Desarrollada en Laravel (PHP) con base de datos MySQL dockerizada
+- ** Frontend**: Desarrollada en Angular
 
-## ✅ Requisitos Previos
+## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
 
@@ -17,7 +17,7 @@ Antes de comenzar, asegúrate de tener instalado:
 - [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.dev/)  
 - Git (para clonar el repositorio)
 
-## 📥 Instalación
+##  Instalación
 
 ### 1. Clonar el repositorio
 
@@ -26,7 +26,7 @@ git clone https://github.com/Faus14/Posiciones-app.git
 cd Posiciones-app
 ```
 
-### 2. Instalación automática (recomendada)
+### 2.a. Instalación automática (recomendada)
 El proyecto incluye un script `setup.sh` que automatiza todo el proceso en sistemas Linux/macOS. Asegúrate que el script tenga permisos de ejecución:
 
 
@@ -43,7 +43,7 @@ chmod +x setup.sh
 - Instala dependencias del frontend (Angular)
 - Levanta ambos servidores
 
-### 3. Instalación manual
+### 2.b. Instalación manual
 
 Si prefieres instalar paso a paso:
 
@@ -85,7 +85,7 @@ npm install
 ng serve --port=4200
 ```
 
-## 🌐 Acceso a la aplicación
+## Acceso a la aplicación
 
 - **Frontend**: [http://localhost:4200](http://localhost:4200)
 - **Backend API**: [http://localhost:8000](http://localhost:8000)
