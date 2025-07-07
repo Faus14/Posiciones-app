@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        // Insertar empresas con datos reales
+        
         DB::table('empresas')->insert([
             ['id' => 1, 'cuit' => '30599828431', 'razonSocial' => 'A REGUEIRA Y CIA. S.A. CEREALES', 'created_at' => now(), 'updated_at' => now()],
             ['id' => 2, 'cuit' => '30703597072', 'razonSocial' => 'A Y N SERVICIOS S.R.L.', 'created_at' => now(), 'updated_at' => now()],
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 7, 'cuit' => '30539391735', 'razonSocial' => 'CAMPOAMOR HNOS. S.A.C.I.F. Y A.', 'created_at' => now(), 'updated_at' => now()],
         ]);
 
-        // Insertar productos con datos reales
+       
         DB::table('productos')->insert([
             ['id' => 1, 'nombre' => 'TRIGO', 'usoFrecuente' => 1, 'created_at' => now(), 'updated_at' => now()],
             ['id' => 2, 'nombre' => 'MAIZ', 'usoFrecuente' => 1, 'created_at' => now(), 'updated_at' => now()],
@@ -42,11 +42,11 @@ class DatabaseSeeder extends Seeder
             ['id' => 10, 'nombre' => 'CENTENO', 'usoFrecuente' => 0, 'created_at' => now(), 'updated_at' => now()],
         ]);
 
-        // Insertar posiciones de ejemplo (puedes ajustar según necesites)
+        
         DB::table('posiciones')->insert([
             [
                 'idEmpresa' => 1,
-                'idProducto' => 1, // TRIGO
+                'idProducto' => 1, 
                 'fechaEntregaInicio' => '2025-07-10',
                 'moneda' => 'USD',
                 'precio' => 285.00,
@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'idEmpresa' => 2,
-                'idProducto' => 2, // MAIZ
+                'idProducto' => 2, 
                 'fechaEntregaInicio' => '2025-07-15',
                 'moneda' => 'ARS',
                 'precio' => 85000.00,
@@ -64,7 +64,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'idEmpresa' => 3,
-                'idProducto' => 6, // SOJA
+                'idProducto' => 6, 
                 'fechaEntregaInicio' => '2025-07-20',
                 'moneda' => 'USD',
                 'precio' => 350.00,
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'idEmpresa' => 5,
-                'idProducto' => 4, // GIRASOL
+                'idProducto' => 4, 
                 'fechaEntregaInicio' => '2025-07-25',
                 'moneda' => 'ARS',
                 'precio' => 110000.00,
@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'idEmpresa' => 7,
-                'idProducto' => 5, // SORGO
+                'idProducto' => 5, 
                 'fechaEntregaInicio' => '2025-07-30',
                 'moneda' => 'ARS',
                 'precio' => 75000.00,
