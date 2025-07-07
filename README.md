@@ -47,7 +47,7 @@ chmod +x setup.sh
 
 ### 2.b. Instalación manual
 
-Si prefieres instalar paso a paso:
+La otra opcion es instalar paso a paso:
 
 #### Levantar base de datos
 ```bash
