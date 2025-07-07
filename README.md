@@ -74,7 +74,7 @@ php artisan migrate:fresh --seed
 php artisan serve --port=8000
 ```
 
-Nota: El servidor backend se quedará ejecutándose. Abre una nueva pestaña/terminal para el siguiente paso.
+Nota: El servidor backend se quedará ejecutándose. Abrir una nueva pestaña/terminal para el siguiente paso.
 
 #### Configurar frontend
 ```bash
@@ -103,7 +103,7 @@ Este proyecto cumple con todos los requerimientos solicitados:
 
 - Comando de consola posicion:crear para insertar posiciones desde la terminal
 
-Abrir un terminal, ir a la carpeta del back osea cd posiciones-app-back y correr lo siguiente:
+Abrir un terminal, ir a la carpeta del back (cd posiciones-app-back) y correr lo siguiente:
 ```bash
 php artisan posicion:crear 1 2 2025-07-10 USD 1500
 ```
