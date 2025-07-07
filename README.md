@@ -3,7 +3,7 @@
 
 ## Descripción del Proyecto
 
-Este repositorio contiene una aplicación full-stack que incluye:
+Este repositorio contiene:
 
 - ** Backend**: Desarrollada en Laravel (PHP) con base de datos MySQL dockerizada
 - ** Frontend**: Desarrollada en Angular
@@ -13,7 +13,7 @@ Este repositorio contiene una aplicación full-stack que incluye:
 Antes de comenzar, asegúrate de tener instalado:
 
 - [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/) (versiones recientes)  
-- [PHP >= 8.1](https://www.php.net/) con [Composer](https://getcomposer.org/)  
+- [PHP >= 8.2](https://www.php.net/) con [Composer](https://getcomposer.org/)  
 - [Node.js >= 18.x](https://nodejs.org/) y [Angular CLI 20.x](https://angular.dev/)  
 - Git (para clonar el repositorio)
 
